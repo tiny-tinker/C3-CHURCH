@@ -1,0 +1,70 @@
+.introduction-section {
+  padding: 70px 0;
+  .stocked-here {
+    border: 1px solid #aaa;
+    padding:20px 40px;
+    position: relative;
+
+    @media only screen and (max-width: 767px) {
+      padding: 20px;
+    }
+
+
+
+    .title {
+      font-family: "bebas_neueregular",sans-serif;
+      font-size: 2.4em;
+      color: #84A4C3;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .description {
+      color: #707070;
+    }
+  }
+
+  .half-circle-container {
+    position: absolute;
+    left: 0;
+    top: -28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .half-circle {
+      width: 52px;
+      height: 28px;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      border: 1px solid gray;
+      border-bottom: 0;
+      box-sizing: border-box;
+      background: white;
+    }
+  }
+
+  .description-images-container {
+    padding: 40px 0;
+    position: relative;
+
+    @media only screen and (min-width: 768px) and (max-width: 991px){
+      .third-image-container {
+        float: left;
+        display: inline-block;
+        position: absolute;
+        bottom: 40px;
+        padding-right: 0;
+      }
+    }
+
+    .image-container{
+      width: 100%;
+      padding: 10px 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
