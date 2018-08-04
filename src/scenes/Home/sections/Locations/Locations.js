@@ -45,7 +45,7 @@ class Locations extends React.Component {
    */
   renderLocationImages(locations) {
     if (locations !== null) {
-      return locations.map((location, index) => (
+      return locations.map((location) => (
         <img id={"locationBackground" + location.id} src={location.photo_url}/>
       ));
     }
@@ -71,7 +71,7 @@ class Locations extends React.Component {
 
   /**
    *
-   * Events Handler
+   * Event Handler
    *
    */
   handleHoverLocation(id) {
@@ -108,6 +108,7 @@ class Locations extends React.Component {
       loading = true;
     }
 
+    // Check if to show the loading locations and decide the class
     let defaultViewerClass = "default-viewer";
     if (loading === false) {
       defaultViewerClass = "default-viewer hide"

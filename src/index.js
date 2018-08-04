@@ -7,6 +7,11 @@ import store, { history } from './store';
 import App from './scenes/App';
 import registerServiceWorker from './registerServiceWorker';
 
+/**
+ * Import some additional css
+ */
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './global.css';
 
 /**

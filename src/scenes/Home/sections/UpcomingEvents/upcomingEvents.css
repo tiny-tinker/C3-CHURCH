@@ -1,0 +1,29 @@
+.upcoming-events-section {
+  padding: 40px 0; }
+  .upcoming-events-section .section-title {
+    font-family: "bebas_neueregular", sans-serif;
+    color: #84A4C3;
+    font-size: 2.5em; }
+  .upcoming-events-section .location-loading-error-text {
+    color: #84A4C3;
+    font-size: 1.5em;
+    text-align: center; }
+  .upcoming-events-section .loading-events-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    min-height: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    .upcoming-events-section .loading-events-container.hide {
+      display: none; }
+    .upcoming-events-section .loading-events-container .loading-events {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+  .upcoming-events-section .events-containter {
+    width: 100%;
+    overflow: hidden;
+    position: relative; }

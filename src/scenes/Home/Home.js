@@ -3,18 +3,19 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 /**
- * import dispatch actions
- /**
+ * Import dispatch actions
+ */
+import { getHomeDynamicInfos } from "./modules/homeActions";
+
+/**
  *
  * Import Sections
  *
  */
-import { getHomeDynamicInfos } from "./modules/homeActions";
-
-
 import Welcome from './sections/Welcome/Welcome';
 import Introduction from './sections/Introduction/Introduction';
 import Locations from './sections/Locations/Locations';
+import UpcommingEvents from './sections/UpcomingEvents/UpcomingEvents';
 
 class Home extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class Home extends React.Component {
         <Welcome/>
         <Introduction/>
         <Locations/>
+        <UpcommingEvents/>
       </div>
     );
   }
