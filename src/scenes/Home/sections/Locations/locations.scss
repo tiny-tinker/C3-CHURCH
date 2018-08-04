@@ -1,0 +1,124 @@
+.locations-section {
+  .section-title {
+    font-family: "bebas_neueregular", sans-serif;
+    color: #84A4C3;
+    font-size: 2.5em;
+    @media only screen and  (max-width: 991px){
+      text-align: center;
+    }
+  }
+
+  .locations-container {
+    position: relative;
+    overflow: hidden;
+
+    /**
+    For Desktop Views
+     */
+    @media only screen and (min-width: 992px) {
+      .locations-viewer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+
+        .image-transitions-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            transition: opacity 1s ease-in-out;
+            opacity:0;
+
+            &.opaque {
+              opacity:1;
+            }
+          }
+        }
+
+        .locations-data-container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      .image-transitions-container {
+        display: none;
+      }
+
+      .locations-data-container {
+        display: none;
+      }
+
+      .locations-data-container-tablet {
+        display: block;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      .locations-data-container-tablet {
+        display: none;
+      }
+    }
+
+    .default-viewer.hide {
+      @media only screen and (min-width: 992px) {
+        opacity: 0;
+      }
+
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+    .default-viewer {
+      width: 100%;
+      transition: opacity 1s ease-in-out;
+      img {
+        width: 100%;
+      }
+    }
+
+
+
+    .scale-loader-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .scale-loader {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .location-loading-error-text {
+        color: white;
+        font-size: 2.5em;
+        text-align: center;
+      }
+    }
+  }
+}

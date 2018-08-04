@@ -5,7 +5,6 @@ import './flipper.css';
 class Flipper extends React.Component {
   render() {
     const {srcImage, title, description, isOccupySpace} = this.props.flipperInfo;
-    console.log(isOccupySpace);
     return(
       <div className="flipper-image-container">
         {isOccupySpace?
@@ -22,6 +21,7 @@ class Flipper extends React.Component {
             </div>
           </div>
           <div className="back face center">
+            <div className="mask"/>
             <img src={srcImage} />
             <div className="back-card-text-container">
               <div className="title">

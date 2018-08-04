@@ -1,5 +1,11 @@
 import React from 'react';
 import './welcome.css';
+
+/**
+ *
+ * Import images
+ *
+ */
 import welcome from './images/welcome.jpg';
 import welcomeMobile from './images/welcome-mobile.jpg';
 import logo from '../../../../assets/images/c3.png';
@@ -28,4 +34,4 @@ class Welcome extends React.Component{
   }
 }
 
-export default Welcome
+export default Welcome;

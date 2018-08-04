@@ -2,7 +2,13 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import createHistory from 'history/createBrowserHistory';
+
 import rootReducer from './services/reducer';
+
+/**
+ * Import Saga subscribers
+ */
+import {locationsApiSubscriber} from "./services/saga";
 
 export const history = createHistory();
 
@@ -23,6 +29,11 @@ const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 
 const store = createStore(rootReducer, initialState, composedEnhancers);
 
-//sagaMiddleware.run(blockExplorerSubscriber);
+/**
+ *
+ * Run saga subscribers
+ *
+ */
+sagaMiddleware.run(locationsApiSubscriber);
 
 export default store;

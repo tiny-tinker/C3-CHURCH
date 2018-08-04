@@ -1,23 +1,21 @@
 import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import './introduction.css';
+import Flipper from "./components/Flipper/Flipper";
 
 /**
  *
- * Import images
- *
+ * Import images *
  */
 import firstImage from './images/first-image.jpg';
 import secondImage from './images/second-image.jpg';
 import thirdImage from './images/third-image.jpg';
-import Flipper from "./components/Flipper/Flipper";
 
 /**
  *
  * Setup vars
  *
  */
-
 const title = 'WE\'RE STOKED YOU\'RE HERE';
 const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta augue sit amet nibh placerat, a hendrerit justo vestibulum. Suspendisse potenti. Sed facilisis varius sodales. Nulla ac mi neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam pulvinar tristique mauris cursus consectetur. Aliquam non pellentesque arcu. In pellentesque orci quis laoreet varius. Pellentesque in eros gravida, mollis nulla sed, tristique nisi. Nullam lacus lacus, posuere sit amet elit sit amet, elementum sagittis turpis. Maecenas varius, felis consectetur maximus porta, massa sapien volutpat nisl, iaculis malesuada leo felis sed mauris. Morbi sit amet leo enim. Praesent auctor faucibus lorem ac tincidunt. Fusce suscipit iaculis varius.';
 const imageFlippers = [{

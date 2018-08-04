@@ -6,10 +6,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import store, { history } from './store';
 import App from './scenes/App';
 import registerServiceWorker from './registerServiceWorker';
+
+import './global.css';
+
+/**
+ *
+ * Import fonts
+ *
+ */
 import './assets/fonts/font-awesome/css/font-awesome.min.css';
 import './assets/fonts/bebas-neue/stylesheet.css';
 import './assets/fonts/roboto/roboto.css';
-import './global.css';
+import './assets/fonts/proxima-nova/fonts.css';
+
 
 const target = document.querySelector('#root');
 

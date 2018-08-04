@@ -1,8 +1,8 @@
 .flipper-image-container {
   width: 100%;
-  padding: 10px 0;
   z-index: 1;
   position: relative;
+  perspective: 1000px;
 
   .flipper-card {
     position: absolute;
@@ -10,8 +10,8 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 0.4s linear;
     transform-style: preserve-3d;
-    transition: all 0.5s linear;
   }
 
   &:hover {
@@ -30,12 +30,20 @@
   .face.back {
     position: absolute;
     left: 0;
-    top: 0%;
+    top: 0;
     display: block;
     transform: rotateY(180deg);
     box-sizing: border-box;
     color: white;
     text-align: center;
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      opacity: 0.6;
+      position: absolute;
+    }
   }
 
   img {

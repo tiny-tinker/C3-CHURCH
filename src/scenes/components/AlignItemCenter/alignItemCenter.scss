@@ -1,0 +1,16 @@
+.align-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  .align-item {
+    &.align-item-top {
+      align-self: flex-start;
+    }
+
+    &.align-item-bottom {
+      align-self: flex-end;
+    }
+  }
+}
