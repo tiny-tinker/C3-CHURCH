@@ -1,0 +1,57 @@
+.group-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 40px);
+  margin: 20px 0;
+  box-shadow: 3px 2px 15px 0 #aaa;
+
+  .map-container {
+    flex-grow: 1;
+    @media only screen and (min-width: 1200px) {
+      height: 200px;
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      height: 180px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      height: 250px;
+    }
+  }
+
+  .group-card-flex {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .group-card-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+
+    div {
+      margin: 2px 0;
+    }
+
+    .name {
+      color: #666;
+      font-weight: bold;
+    }
+
+    .secondary-color {
+      color: #8C8C8C;
+    }
+  }
+
+  .date-time-container {
+    border-radius: 7px;
+    background: #84A4C3;
+    color: white;
+    padding: 0 5px;
+    margin: 10px 5px;
+  }
+}

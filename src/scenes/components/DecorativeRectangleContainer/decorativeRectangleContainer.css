@@ -1,0 +1,29 @@
+.decorative-rectangle-container {
+  border: 1px solid #aaa;
+  padding: 20px 40px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .decorative-rectangle-container {
+    padding: 20px;
+  }
+}
+.decorative-rectangle-container .half-circle-container {
+  position: absolute;
+  left: 0;
+  top: -28px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.decorative-rectangle-container .half-circle-container .half-circle {
+  width: 52px;
+  height: 28px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border: 1px solid gray;
+  border-bottom: 0;
+  box-sizing: border-box;
+  background: white;
+}

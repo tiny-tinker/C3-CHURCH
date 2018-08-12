@@ -8,7 +8,12 @@ import rootReducer from './services/reducer';
 /**
  * Import Saga subscribers
  */
-import {locationsApiSubscriber} from "./services/saga";
+import {
+  locationsApiSubscriber,
+  podcastsApiSubscriber,
+  connectGroupApiSubscriber,
+  visitApiSubscriber
+} from './services/saga';
 
 export const history = createHistory();
 
@@ -25,7 +30,10 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
-const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
+const composedEnhancers = compose(
+  applyMiddleware(...middleware),
+  ...enhancers
+);
 
 const store = createStore(rootReducer, initialState, composedEnhancers);
 
@@ -35,5 +43,8 @@ const store = createStore(rootReducer, initialState, composedEnhancers);
  *
  */
 sagaMiddleware.run(locationsApiSubscriber);
+sagaMiddleware.run(podcastsApiSubscriber);
+sagaMiddleware.run(connectGroupApiSubscriber);
+sagaMiddleware.run(visitApiSubscriber);
 
 export default store;

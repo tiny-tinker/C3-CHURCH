@@ -1,7 +1,14 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
-import homeReducer from './../scenes/Home/modules/homeReducer';
+import locationsAndEvents from './api/locationsAndEvents/locationsAndEventsReducer';
+import podcastsReducer from './api/podcasts/podcastReducer';
+import connectGroupReducer from './api/connectGroup/connectGroupReducer';
+import visitReducer from './api/visit/visitReducer';
+
 export default combineReducers({
   routing: routerReducer,
-  homeScene: homeReducer
+  locationsAndEvents: locationsAndEvents,
+  podcasts: podcastsReducer,
+  connectGroups: connectGroupReducer,
+  visit: visitReducer
 });

@@ -5,7 +5,7 @@ import { ScaleLoader } from 'react-spinners';
 import Slider from 'react-slick';
 import Event from './components/Event/Event';
 import './upcomingEvents.css';
-import AlignItemCenter from "../../../components/AlignItemCenter/AlignItemCenter";
+import AlignItemCenter from '../../../components/AlignItemCenter/AlignItemCenter';
 
 /**
  *
@@ -13,22 +13,26 @@ import AlignItemCenter from "../../../components/AlignItemCenter/AlignItemCenter
  *
  */
 const sectionTitle = 'upcoming events';
-const loadingFailed = 'Loading events failed!'
-class UpcomingEvents extends React.Component{
+const loadingFailed = 'Loading events failed!';
+class UpcomingEvents extends React.Component {
   /**
    *
    * Custom Render functions
    */
   renderEvents(events) {
     if (events !== null) {
-      return events.map((event) => (
-        <Event imageUrl={event.image_url} title={event.title} starttime={event.starttime}/>
+      return events.map(event => (
+        <Event
+          imageUrl={event.image_url}
+          title={event.title}
+          starttime={event.starttime}
+        />
       ));
     }
   }
 
   render() {
-    let {loading, events, error} = this.props;
+    let { loading, events, error } = this.props;
     let bShowError = false;
 
     // If error then show the loading bar
@@ -59,7 +63,7 @@ class UpcomingEvents extends React.Component{
           settings: {
             centerMode: true,
             centerPadding: '30px',
-            slidesToShow: 3 > 2 ?  2: 1,
+            slidesToShow: 3 > 2 ? 2 : 1
           }
         },
         {
@@ -72,38 +76,29 @@ class UpcomingEvents extends React.Component{
         }
       ]
     };
-    return(
+    return (
       <div className="upcoming-events-section">
         <Container>
-          <div className="section-title">
-            {sectionTitle}
-          </div>
+          <div className="section-title">{sectionTitle}</div>
           <div className={loadingEventClass}>
             <AlignItemCenter className="loading-events">
-              <ScaleLoader
-                color={'#84A4C3'}
-                loading={loading}
-              />
-              { bShowError?(<div className="location-loading-error-text">{loadingFailed}</div>):('')}
+              <ScaleLoader color={'#84A4C3'} loading={loading} />
+              {bShowError ? (
+                <div className="location-loading-error-text">
+                  {loadingFailed}
+                </div>
+              ) : (
+                ''
+              )}
             </AlignItemCenter>
           </div>
           <div className="events-containter">
             <Slider {...settings}>
-              {
-                this.renderEvents(events)
-              }
-              {
-                  this.renderEvents(events)
-              }
-              {
-                  this.renderEvents(events)
-              }
-              {
-                this.renderEvents(events)
-              }
-              {
-                this.renderEvents(events)
-              }
+              {this.renderEvents(events)}
+              {this.renderEvents(events)}
+              {this.renderEvents(events)}
+              {this.renderEvents(events)}
+              {this.renderEvents(events)}
             </Slider>
           </div>
         </Container>
@@ -113,10 +108,10 @@ class UpcomingEvents extends React.Component{
 }
 
 export default connect(
-  (state) => ({
-    loading: state.homeScene.loading,
-    events: state.homeScene.homeDynamicInfos.featured,
-    error: state.homeScene.error
+  state => ({
+    loading: state.locationsAndEvents.loading,
+    events: state.locationsAndEvents.locationsAndEvents.featured,
+    error: state.locationsAndEvents.error
   }),
   null
 )(UpcomingEvents);

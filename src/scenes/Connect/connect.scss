@@ -1,0 +1,50 @@
+.connect-scene {
+  > img {
+    width: 100%;
+  }
+
+  .title {
+    font-family: "bebas_neueregular",sans-serif;
+    font-size: 2.4em;
+    color: #84A4C3;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .description {
+    color: #707070;
+  }
+
+  .groups-container {
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  .loading-events-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    min-height: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.hide {
+      display: none;
+    }
+
+    .loading-events {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  .groups-loading-error-text {
+    color: #84A4C3;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+}

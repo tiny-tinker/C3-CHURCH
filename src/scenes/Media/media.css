@@ -1,0 +1,23 @@
+.media-scene {
+  position: relative;
+}
+.media-scene .media-scene-header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.media-scene .media-scene-header img {
+  width: 100%;
+}
+.media-scene .media-scene-header .media-scene-header-container {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.media-scene .media-scene-header .media-scene-header-container .logo {
+  right: 40px;
+}

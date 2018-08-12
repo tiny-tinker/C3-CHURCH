@@ -1,0 +1,68 @@
+@import './../../globalValues.scss';
+
+.contact-scene {
+  height: calc(100vh - #{$footer-height});
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .contact-us-card {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    background: white;
+
+    .contact-us-title {
+      font-size: 2.0em;
+      color: #84A4C3;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .description {
+      color : #8C8C8C;
+      text-align: center;
+    }
+  }
+
+  .contact-infos {
+    background: white;
+    padding: 20px;
+
+    .phone, .email {
+      display: flex;
+      align-items: center;
+      color: #8C8C8C;
+      padding: 10px 0;
+
+      i {
+        font-size: 2.5em;
+        align-self: center;
+      }
+
+      .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+      }
+
+      .values {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.contact-infos-container {
+  @media only screen and (max-width: 767px) {
+    margin-top: 30px;
+  }
+}

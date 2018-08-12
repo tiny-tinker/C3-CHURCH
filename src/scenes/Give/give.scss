@@ -1,0 +1,57 @@
+@import './../../globalValues.scss';
+
+.give-scene {
+  height: calc(100vh - #{$footer-height});
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 768px) {
+//    margin-bottom: -$footer-height;
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .give-card {
+    display: flex;
+    flex-direction: column;
+    padding:30px 20px;
+    background: white;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+
+    .give-card-title {
+      font-size: 2.0em;
+      color: #84A4C3;
+      margin: 10px auto;
+    }
+
+    .give-card-description {
+      color: #B4B4B4;
+      margin-bottom: 20px;
+    }
+
+    .thank-you {
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .button-give {
+      padding: 20px;
+      background: #84A4C3;
+      color: white;
+      cursor: pointer;
+      width: 150px;
+    }
+
+    .partnered {
+      margin-top: 20px;
+      color: #B4B4B4;
+    }
+  }
+}

@@ -1,49 +1,33 @@
 .introduction-section {
-  padding: 70px 0; }
-  .introduction-section .stocked-here {
-    border: 1px solid #aaa;
-    padding: 20px 40px;
-    position: relative; }
-    @media only screen and (max-width: 767px) {
-      .introduction-section .stocked-here {
-        padding: 20px; } }
-    .introduction-section .stocked-here .title {
-      font-family: "bebas_neueregular",sans-serif;
-      font-size: 2.4em;
-      color: #84A4C3;
-      text-align: center;
-      text-transform: uppercase; }
-    .introduction-section .stocked-here .description {
-      color: #707070; }
-  .introduction-section .half-circle-container {
+  padding: 70px 0;
+}
+.introduction-section .title {
+  font-family: 'bebas_neueregular', sans-serif;
+  font-size: 2.4em;
+  color: #84a4c3;
+  text-align: center;
+  text-transform: uppercase;
+}
+.introduction-section .description {
+  color: #707070;
+}
+.introduction-section .description-images-container {
+  padding: 40px 0;
+  position: relative;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .introduction-section .description-images-container .third-image-container {
+    float: left;
+    display: inline-block;
     position: absolute;
-    left: 0;
-    top: -28px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .introduction-section .half-circle-container .half-circle {
-      width: 52px;
-      height: 28px;
-      border-top-left-radius: 100px;
-      border-top-right-radius: 100px;
-      border: 1px solid gray;
-      border-bottom: 0;
-      box-sizing: border-box;
-      background: white; }
-  .introduction-section .description-images-container {
-    padding: 40px 0;
-    position: relative; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .introduction-section .description-images-container .third-image-container {
-        float: left;
-        display: inline-block;
-        position: absolute;
-        bottom: 40px;
-        padding-right: 0; } }
-    .introduction-section .description-images-container .image-container {
-      width: 100%;
-      padding: 10px 0; }
-      .introduction-section .description-images-container .image-container img {
-        width: 100%; }
+    bottom: 40px;
+    padding-right: 0;
+  }
+}
+.introduction-section .description-images-container .image-container {
+  width: 100%;
+  padding: 10px 0;
+}
+.introduction-section .description-images-container .image-container img {
+  width: 100%;
+}

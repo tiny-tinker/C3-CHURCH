@@ -1,0 +1,45 @@
+.give-scene {
+  height: calc(100vh - 152px);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.give-scene img {
+  position: absolute;
+  z-index: -1;
+}
+.give-scene .give-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  background: white;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.give-scene .give-card .give-card-title {
+  font-size: 2em;
+  color: #84a4c3;
+  margin: 10px auto;
+}
+.give-scene .give-card .give-card-description {
+  color: #b4b4b4;
+  margin-bottom: 20px;
+}
+.give-scene .give-card .thank-you {
+  color: black;
+  margin-bottom: 20px;
+}
+.give-scene .give-card .button-give {
+  padding: 20px;
+  background: #84a4c3;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+}
+.give-scene .give-card .partnered {
+  margin-top: 20px;
+  color: #b4b4b4;
+}

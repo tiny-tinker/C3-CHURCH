@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 /**
  * Import dispatch actions
  */
-import { getHomeDynamicInfos } from "./modules/homeActions";
+import { getLocationsAndEvents } from '../../services/api/locationsAndEvents/locationsAndEventsActions';
 
 /**
  *
@@ -14,21 +14,21 @@ import { getHomeDynamicInfos } from "./modules/homeActions";
  */
 import Welcome from './sections/Welcome/Welcome';
 import Introduction from './sections/Introduction/Introduction';
-import Locations from './sections/Locations/Locations';
+import LocationsSection from './sections/LocationsSection/LocationsSection';
 import UpcommingEvents from './sections/UpcomingEvents/UpcomingEvents';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.props.homeActions.getHomeDynamicInfos();
+    this.props.homeActions.getLocationsAndEvents();
   }
   render() {
     return (
       <div className="home">
-        <Welcome/>
-        <Introduction/>
-        <Locations/>
-        <UpcommingEvents/>
+        <Welcome />
+        <Introduction />
+        <LocationsSection />
+        <UpcommingEvents />
       </div>
     );
   }
@@ -37,9 +37,11 @@ class Home extends React.Component {
 export default connect(
   null,
   dispatch => ({
-    homeActions : bindActionCreators({
-        getHomeDynamicInfos
-      }, dispatch
+    homeActions: bindActionCreators(
+      {
+        getLocationsAndEvents
+      },
+      dispatch
     )
   })
 )(Home);

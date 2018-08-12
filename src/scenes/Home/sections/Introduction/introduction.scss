@@ -1,48 +1,16 @@
 .introduction-section {
   padding: 70px 0;
-  .stocked-here {
-    border: 1px solid #aaa;
-    padding:20px 40px;
-    position: relative;
 
-    @media only screen and (max-width: 767px) {
-      padding: 20px;
-    }
-
-
-
-    .title {
-      font-family: "bebas_neueregular",sans-serif;
-      font-size: 2.4em;
-      color: #84A4C3;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .description {
-      color: #707070;
-    }
+  .title {
+    font-family: "bebas_neueregular",sans-serif;
+    font-size: 2.4em;
+    color: #84A4C3;
+    text-align: center;
+    text-transform: uppercase;
   }
 
-  .half-circle-container {
-    position: absolute;
-    left: 0;
-    top: -28px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .half-circle {
-      width: 52px;
-      height: 28px;
-      border-top-left-radius: 100px;
-      border-top-right-radius: 100px;
-      border: 1px solid gray;
-      border-bottom: 0;
-      box-sizing: border-box;
-      background: white;
-    }
+  .description {
+    color: #707070;
   }
 
   .description-images-container {

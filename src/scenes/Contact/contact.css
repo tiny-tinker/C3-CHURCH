@@ -1,0 +1,61 @@
+.contact-scene {
+  height: calc(100vh - 152px);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-scene > img {
+  position: absolute;
+  z-index: -1;
+}
+.contact-scene .contact-us-card {
+  display: block;
+  padding: 20px;
+  width: 100%;
+  background: white;
+}
+.contact-scene .contact-us-card .contact-us-title {
+  font-size: 2em;
+  color: #84a4c3;
+  margin: 10px 0;
+  text-align: center;
+}
+.contact-scene .contact-us-card .description {
+  color: #8c8c8c;
+  text-align: center;
+}
+.contact-scene .contact-infos {
+  background: white;
+  padding: 20px;
+}
+.contact-scene .contact-infos .phone,
+.contact-scene .contact-infos .email {
+  display: flex;
+  align-items: center;
+  color: #8c8c8c;
+  padding: 10px 0;
+}
+.contact-scene .contact-infos .phone i,
+.contact-scene .contact-infos .email i {
+  font-size: 2.5em;
+  align-self: center;
+}
+.contact-scene .contact-infos .phone .icon-container,
+.contact-scene .contact-infos .email .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+.contact-scene .contact-infos .phone .values,
+.contact-scene .contact-infos .email .values {
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-infos-container {
+    margin-top: 30px;
+  }
+}
