@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 import { connect } from 'react-redux';
 import { ScaleLoader } from 'react-spinners';
 import Slider from 'react-slick';
-import Event from './components/Event/Event';
+import Event from '../../../components/Event/Event';
 import './upcomingEvents.css';
 import AlignItemCenter from '../../../components/AlignItemCenter/AlignItemCenter';
 

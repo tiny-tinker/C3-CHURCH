@@ -5,15 +5,13 @@ import './event.css';
 
 class Event extends React.Component {
   render() {
-    const {imageUrl, title, starttime} = this.props;
+    const { imageUrl, title, starttime } = this.props;
     return (
       <div className="events-card">
-        <img src={imageUrl}/>
-        <div className="events-title">
-          {title}
-        </div>
+        <img src={imageUrl} />
+        <div className="events-title">{title}</div>
         <div className="events-start-time">
-          {moment(starttime).format("MMMM D, YYYY")}
+          {moment(starttime).format('MMMM D, YYYY')}
         </div>
       </div>
     );
