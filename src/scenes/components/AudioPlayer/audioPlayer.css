@@ -1,0 +1,26 @@
+.audio-player-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.audio-player-container button:focus {
+  outline: none;
+}
+.audio-player-container .time {
+  padding: 0 10px;
+}
+.audio-player-container .volume-slider {
+  width: 120px;
+}
+.audio-player-container.light {
+  color: #fff;
+}
+.audio-player-container.light .time {
+  color: #fff;
+}
+.audio-player-container.light .control-button {
+  color: #fff;
+}
+.audio-player-container.light .thumb {
+  color: #fff;
+}

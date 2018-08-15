@@ -20,12 +20,19 @@
   align-items: center;
 }
 .give-scene .give-card .give-card-title {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #84a4c3;
   margin: 10px auto;
+  font-family: 'bebas_neueregular', sans-serif;
+}
+.give-scene .give-card .give-card-title a {
+  cursor: pointer;
+}
+.give-scene .give-card .give-card-title a i {
+  padding-left: 0.1em;
 }
 .give-scene .give-card .give-card-description {
-  color: #b4b4b4;
+  color: #777;
   margin-bottom: 20px;
 }
 .give-scene .give-card .thank-you {

@@ -1,0 +1,37 @@
+$light-theme-color : #fff;
+
+.audio-player-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .time {
+    padding: 0 10px;
+  }
+
+  .volume-slider {
+    width: 120px;
+  }
+
+  &.light {
+    color: $light-theme-color;
+
+    .time {
+      color: $light-theme-color;
+    }
+
+    .control-button {
+      color: $light-theme-color;
+    }
+
+    .thumb {
+      color: $light-theme-color;
+    }
+  }
+}

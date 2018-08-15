@@ -2,52 +2,69 @@
   width: 100%;
   z-index: 1;
   position: relative;
-  perspective: 1000px; }
-  .flipper-image-container .flipper-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s linear;
-    transform-style: preserve-3d; }
-  .flipper-image-container:hover .flipper-card {
-    transform: rotateY(180deg); }
-  .flipper-image-container .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; }
-  .flipper-image-container .face.back {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    transform: rotateY(180deg);
-    box-sizing: border-box;
-    color: white;
-    text-align: center; }
-    .flipper-image-container .face.back .mask {
-      width: 100%;
-      height: 100%;
-      background-color: #000000;
-      opacity: 0.6;
-      position: absolute; }
-  .flipper-image-container img {
-    width: 100%;
-    box-shadow: 3px 3px 3px #aaa; }
-  .flipper-image-container .occupy-space {
-    visibility: hidden; }
-  .flipper-image-container .title {
-    font-family: "bebas_neueregular",sans-serif;
-    font-size: 2.0em;
-    padding: 20px 10px;
-    color: white; }
-  .flipper-image-container .back-card-text-container, .flipper-image-container .front-card-text-container {
-    position: absolute;
-    top: 0; }
-  @media only screen and (min-width: 992px) {
-    .flipper-image-container i {
-      display: none; } }
+  perspective: 1000px;
+}
+.flipper-image-container .flipper-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+}
+.flipper-image-container:hover .flipper-card {
+  transform: rotateY(180deg);
+}
+.flipper-image-container .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flipper-image-container .face.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+.flipper-image-container .face.back .mask {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.6;
+  position: absolute;
+}
+.flipper-image-container img {
+  width: 100%;
+  box-shadow: 3px 3px 3px #aaa;
+}
+.flipper-image-container .occupy-space {
+  visibility: hidden;
+}
+.flipper-image-container .title {
+  font-family: 'bebas_neueregular', sans-serif;
+  font-size: 2em;
+  padding: 20px 10px;
+  color: white;
+}
+.flipper-image-container .back-card-text-container,
+.flipper-image-container .front-card-text-container {
+  position: absolute;
+  top: 0;
+}
+@media only screen and (min-width: 992px) {
   .flipper-image-container i {
-    margin-left: 5px; }
+    display: none;
+  }
+}
+.flipper-image-container i {
+  margin-left: 5px;
+}
+.flipper-image-container .description {
+  color: white;
+}

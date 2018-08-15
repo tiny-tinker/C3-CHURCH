@@ -47,35 +47,47 @@ class UpcomingEvents extends React.Component {
       loadingEventClass = 'loading-events-container hide';
     }
 
+    let slideCount = 0;
+    if (events !== null) {
+      slideCount = events.length;
+    }
+    let slideToShow = slideCount > 3 ? 3 : slideCount;
     // Events slider settings...
     const settings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 3000,
+      slidesToShow: slideToShow,
+      slidesToScroll: slideToShow,
+      initialSlide: 0,
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 1200,
           settings: {
-            centerMode: true,
-            centerPadding: '30px',
-            slidesToShow: 3 > 2 ? 2 : 1
+            slidesToShow: slideToShow,
+            slidesToScroll: slideToShow,
+            infinite: true,
+            dots: true
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 991,
           settings: {
-            centerMode: true,
-            centerPadding: '30px',
-            slidesToShow: 1
+            slidesToShow: slideToShow,
+            slidesToScroll: slideToShow,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         }
       ]
     };
+
     return (
       <div className="upcoming-events-section">
         <Container>
@@ -93,13 +105,7 @@ class UpcomingEvents extends React.Component {
             </AlignItemCenter>
           </div>
           <div className="events-containter">
-            <Slider {...settings}>
-              {this.renderEvents(events)}
-              {this.renderEvents(events)}
-              {this.renderEvents(events)}
-              {this.renderEvents(events)}
-              {this.renderEvents(events)}
-            </Slider>
+            <Slider {...settings}>{this.renderEvents(events)}</Slider>
           </div>
         </Container>
       </div>

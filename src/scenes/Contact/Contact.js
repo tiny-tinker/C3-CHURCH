@@ -24,12 +24,26 @@ class Contact extends React.Component {
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   /**
    *
    * Event handle functions
    */
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    if (this.props.loading === true) return;
+
+    const data = {
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      mailbody: this.state.mailbody
+    };
+  }
 
   handleChangeEmail(event) {
     this.setState({
@@ -79,7 +93,7 @@ class Contact extends React.Component {
                 <div className="contact-us-title">{title}</div>
                 <div className="description">{description}</div>
 
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                   <FormGroup>
                     <Label for="name">Name*</Label>
                     <Input
@@ -114,6 +128,9 @@ class Contact extends React.Component {
                       onChange={this.handleChangeMessage}
                     />
                   </FormGroup>
+                  <Input type="submit" className="submit-button">
+                    Submit
+                  </Input>
                 </Form>
               </div>
             </Col>

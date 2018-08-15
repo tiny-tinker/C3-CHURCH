@@ -7,8 +7,91 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    img {
+    overflow: hidden;
+
+    .media-header-title {
+      display: none;
+      @media only screen and (max-width: 767px) {
+        display: inline-block;
+        color: white;
+        font-size: 2.0em;
+      }
+    }
+    > img {
       width: 100%;
+
+      @media only screen and (max-width: 767px) {
+        width: unset;
+        height: 100vh;
+      }
+    }
+
+    .logo-media-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 140px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .logo-container {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        @media only screen and (max-width: 767px) {
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 375px;
+        }
+        > img {
+          @media only screen and (min-width: 768px) {
+            margin-left: auto;
+            margin-right: 100px;
+            margin-bottom: 375px;
+          }
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            height: 200px;
+          }
+
+          @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            height: 250px;
+          }
+          @media only screen and (max-width: 767px) {
+            height: 150px;
+            margin-right: 0;
+            margin-left: 0;
+          }
+        }
+      }
+
+      .media-container {
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        .podcast-info-container {
+          display: table;
+          margin: 0 auto;
+          .head-podcast-title, .head-podcast-date {
+            color: white;
+          }
+
+          .head-podcast-title {
+            font-size: 1.2em;
+          }
+        }
+
+        .media-loading-error-text {
+          color: white;
+          font-size: 2.5em;
+          text-align: center;
+        }
+      }
     }
 
     .media-scene-header-container {
@@ -22,5 +105,30 @@
         right: 40px;
       }
     }
+  }
+
+  .podcasts-media-container {
+    display: flex;
+    flex-direction: column;
+
+    .podcast-card {
+      margin: 25px 0;
+      .podcast-infos {
+        color: #212529;
+        padding-left: 15px;
+        .podcast-title {
+          font-size: 1.0em;
+        }
+        .podcast-date {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  .loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 200px;
   }
 }

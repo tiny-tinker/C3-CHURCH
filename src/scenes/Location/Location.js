@@ -24,9 +24,10 @@ import firstImage from '../../assets/images/temp/first-image.png';
 import secondImage from '../../assets/images/temp/second-image.png';
 import thirdImage from '../../assets/images/temp/third-image.png';
 import Flipper from '../Home/sections/Introduction/components/Flipper/Flipper';
-import Audio from '../Media/components/Audio/Audio';
-import Event from '../components/Event/Event';
 
+import Event from '../components/Event/Event';
+import moment from 'moment/moment';
+import AudioPlayer from '../components/AudioPlayer/AudioPlayer';
 /**
  * Setup vars
  */
@@ -65,55 +66,68 @@ class Location extends React.Component {
       console.log('events data here');
       console.log(events.length);
       return events.map(event => (
-        <Event
-          imageUrl={event.image_url}
-          title={event.title}
-          starttime={event.starttime}
-        />
+        <div>
+          <Event
+            imageUrl={event.image_url}
+            title={event.title}
+            starttime={event.starttime}
+          />
+        </div>
       ));
     }
   }
   renderPodcasts(podcasts) {
     if (podcasts !== null) {
       return podcasts.map((m, index) => (
-        <Audio
-          key={index}
-          idflag={true}
-          id={'audiosub' + index}
-          className="payler"
-          title={m.author + '-' + m.title}
-          src={m.podcast_file_path}
-          date={m.dateof}
-        />
+        <div className="podcast-card" key={index}>
+          <div className="podcast-infos">
+            <div className="podcast-title">{m.author + ' - ' + m.title}</div>
+            <div className="podcast-date">
+              {moment(m.dateof).format('MMMM D, YYYY')}
+            </div>
+          </div>
+          <AudioPlayer theme="dark" audio={m.podcast_file_path} />
+        </div>
       ));
     }
   }
   renderLocationInfo(locationInfo) {
+    let slideCount = 0;
+    if (locationInfo !== null) {
+      slideCount = locationInfo.events.length;
+    }
+    let slideToShow = slideCount > 3 ? 3 : slideCount;
     // Events slider settings...
     const settings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 3000,
+      slidesToShow: slideToShow,
+      slidesToScroll: slideToShow,
+      initialSlide: 0,
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 1200,
           settings: {
-            centerMode: true,
-            centerPadding: '30px',
-            slidesToShow: 3 > 2 ? 2 : 1
+            slidesToShow: slideToShow,
+            slidesToScroll: slideToShow,
+            infinite: true,
+            dots: true
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 991,
           settings: {
-            centerMode: true,
-            centerPadding: '30px',
-            slidesToShow: 1
+            slidesToShow: slideToShow,
+            slidesToScroll: slideToShow,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         }
       ]
@@ -140,11 +154,11 @@ class Location extends React.Component {
           </div>
           <Container>
             <DecorativeRectangleContainer>
-              <div className="title">
+              <div className="location-title">
                 WELCOME TO C3 CHURCH {locationInfo.location.name}
               </div>
               <p
-                className="description"
+                className="location-description"
                 dangerouslySetInnerHTML={{
                   __html: locationInfo.location.welcome
                 }}

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
 import Locations from '../../../components/Locations/Locations';
+import './locationsSection.css';
 /**
  *
  * Setup vars

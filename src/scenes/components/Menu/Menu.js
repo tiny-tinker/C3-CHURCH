@@ -34,7 +34,7 @@ class Menu extends React.Component {
   }
 
   hideMenu(event) {
-    event.preventDefault();
+    //event.preventDefault();
 
     this.setState({
       bShowMenu: false
@@ -64,16 +64,24 @@ class Menu extends React.Component {
             </div>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={this.hideMenu}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/visit">Visit</Link>
+                <Link to="/visit" onClick={this.hideMenu}>
+                  Visit
+                </Link>
               </li>
               <li>
-                <Link to="/give">Give</Link>
+                <Link to="/give" onClick={this.hideMenu}>
+                  Give
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" onClick={this.hideMenu}>
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

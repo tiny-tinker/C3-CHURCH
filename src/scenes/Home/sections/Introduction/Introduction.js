@@ -51,7 +51,7 @@ class Introduction extends React.Component {
         <Container>
           <DecorativeRectangleContainer>
             <div className="title">{title}</div>
-            <p className="description">{description}</p>
+            <p className="page-description">{description}</p>
           </DecorativeRectangleContainer>
           <div className="description-images-container">
             <Row>

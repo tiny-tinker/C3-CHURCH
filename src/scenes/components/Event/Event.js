@@ -11,7 +11,8 @@ class Event extends React.Component {
         <img src={imageUrl} />
         <div className="events-title">{title}</div>
         <div className="events-start-time">
-          {moment(starttime).format('MMMM D, YYYY')}
+          <span>{moment(starttime).format('MMMM D, YYYY')}</span>
+          <span>{moment(starttime).format('h A')}</span>
         </div>
       </div>
     );

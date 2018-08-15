@@ -70,7 +70,7 @@
         }
       }
     }
-    .title {
+    .location-title {
       font-family: "bebas_neueregular",sans-serif;
       font-size: 2.4em;
       color: #84A4C3;
@@ -78,7 +78,7 @@
       text-transform: uppercase;
     }
 
-    .description {
+    .location-description {
       color: #707070;
     }
 
@@ -155,13 +155,14 @@
         border: 1px solid #aaa;
 
         .infos-section {
-          padding: 50px;
+          padding: 25px 0 25px 40px;
 
           .field {
             display: flex;
             -ms-flex-align: center;
             align-items: center;
             color: #8C8C8C;
+            padding: 10px 0;
 
             .icon-container {
               display: flex;
@@ -180,6 +181,20 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .podcast-card {
+    margin: 25px 0;
+    .podcast-infos {
+      color: #212529;
+      padding-left: 15px;
+      .podcast-title {
+        font-size: 1.0em;
+      }
+      .podcast-date {
+        font-size: 0.9em;
       }
     }
   }

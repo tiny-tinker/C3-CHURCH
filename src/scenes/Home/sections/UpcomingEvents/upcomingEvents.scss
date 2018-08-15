@@ -5,6 +5,10 @@
     font-family: "bebas_neueregular", sans-serif;
     color: #84A4C3;
     font-size: 2.5em;
+
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 
   .location-loading-error-text {

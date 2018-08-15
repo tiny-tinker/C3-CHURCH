@@ -20,7 +20,8 @@
     background: white;
 
     .contact-us-title {
-      font-size: 2.0em;
+      font-family: 'bebas_neueregular', sans-serif;
+      font-size: 2.5em;
       color: #84A4C3;
       margin: 10px 0;
       text-align: center;
@@ -29,6 +30,14 @@
     .description {
       color : #8C8C8C;
       text-align: center;
+    }
+
+    .submit-button {
+      margin-left: auto;
+      width: 120px;
+      background-color: #84A4C3;
+      color: white;
+      cursor: pointer;
     }
   }
 
